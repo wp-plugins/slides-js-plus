@@ -1,0 +1,134 @@
+
+#slides, 
+#products{
+    position: relative;
+}
+
+#products li {
+    display: inline;
+    margin: 5px;
+}
+
+#products ul.pagination {
+    text-align: left;
+    margin: 20px 0;
+}
+
+#products ul.pagination li a {
+    background: #FDFDFD;
+}
+
+#products ul.pagination li img {
+    width: 120px;
+}
+
+
+/*
+	Slides container
+	Important:
+	Set the width of your slides container
+	Set to display none, prevents content flash
+*/
+
+.slides_container {
+	overflow:hidden;
+	position:relative;
+	display:none;
+        width: 100%
+}
+
+/*
+	Each slide
+	Important:
+	Set the width of your slides
+	If height not specified height will be set by the slide content
+	Set to display block
+*/
+
+
+.slides_container a img {
+	display:block;
+}
+
+.slides_container a {
+        width: 570px;
+	height:270px;
+	display:block;
+}
+
+#slides .next {
+    position: absolute;
+    right: 5px;
+    top: 0;
+    z-index: 999;
+    top: 45%;
+    background: url('../images/next.png');
+    height: 32px;
+    width: 32px;
+    text-indent: 32px;
+    overflow: hidden;
+}
+
+#slides .prev {
+    position: absolute;
+    left: 5px;
+    top: 0;
+    z-index: 999;
+    top: 45%;
+    background: url('../images/prev.png');
+    height: 32px;
+    width: 32px;
+    text-indent: 32px;
+    overflow: hidden;
+}
+
+#products .next {
+    position: absolute;
+    right: 5px;
+    top: 0;
+    z-index: 999;
+    top: 35%;
+    background: url('../images/next.png');
+    height: 32px;
+    width: 32px;
+    text-indent: 32px;
+    overflow: hidden;
+}
+
+#products .prev {
+    position: absolute;
+    left: 5px;
+    top: 0;
+    z-index: 999;
+    top: 35%;
+    background: url('../images/prev.png');
+    height: 32px;
+    width: 32px;
+    text-indent: 32px;
+    overflow: hidden;    
+}
+
+#slides ul.pagination {
+    text-align: right;
+    position: absolute;
+    bottom: 0;
+    z-index: 999;
+    right: 10px;
+    height: 2px;
+}
+
+#slides .pagination li {
+    display: inline;
+}
+
+#slides .pagination li.current a {
+    background: #666;
+}
+
+#slides .pagination a {
+    margin: 0 2px;
+    padding: 5px 10px;
+    color: #FFF;
+    background: #999;
+    text-decoration: none;
+}
