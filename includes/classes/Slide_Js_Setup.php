@@ -46,6 +46,12 @@ class Slide_Js_Setup {
             wp_enqueue_style( 'thickbox' );
             
             wp_enqueue_script('slide', SLIDEJS_BASE_URL . 'includes/js/slideshow.js');
+            
+            
+            /* Sortable Scripts */
+            wp_enqueue_script('jquery');
+            wp_enqueue_script('jquery-ui-core');
+            wp_enqueue_script('jquery-ui-sortable'); 
         }
     }
     

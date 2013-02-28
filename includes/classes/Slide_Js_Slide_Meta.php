@@ -67,12 +67,22 @@ class Slide_Js_Slide_Meta {
         $slide_order = maybe_unserialize( get_post_meta( $post->ID, '_slide_order', true ) );
         
         
+        echo '<script>
+                    jQuery(document).ready(function($){
+                        $(function() {
+                            $( "#sortable" ).sortable();
+                            $( "#sortable" ).disableSelection();
+                        }); 
+                    });
+              </script>';
+        
         echo '<div id="slidejs-slide">';
+        echo '<ul id="sortable">';
         if($slide_img) {
             foreach($slide_img as $img){
 
-                // image upload            
-                echo '<p class="slide-wrap"><span class="group"><span class="close-img">&nbsp;</span><label for="new_slides" class="hidden">Slide</label><input class="upload hidden" type="text" name="image[]" value="'.$img.'" />';
+                // image upload                 
+                echo '<li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span><p class="slide-wrap"><span class="group"><span class="close-img">&nbsp;</span><label for="new_slides" class="hidden">Slide</label><input class="upload hidden" type="text" name="image[]" value="'.$img.'" />';
                 echo '<input class="upload-button hidden" type="button" name="wsl-image-add" value="Upload Image" />';
                 echo '<img src="'.esc_attr($img).'" class="slidejs-img"></span>';
 
@@ -80,7 +90,7 @@ class Slide_Js_Slide_Meta {
                 echo '<label>Slide Link</label>';
                 echo '<input type="text" id="slide-link" name="slide-link[]" value="'.esc_url($slide_link[$count]).'" />';
                 
-                echo '<a href="#" id="remScnt">Remove</a>';
+                echo '<a href="#" id="remScnt">Remove</a></li>';
                 // Slide order
 //                echo '<label>Slide Order</label>';
 //                echo '<input type="text" id="slide-order" width="100px" name="slide-order[]" value="'.$slide_order[$count].'" />';
@@ -98,10 +108,8 @@ class Slide_Js_Slide_Meta {
                 $count++;
             }
         }
-        echo '</div>';
-        
-        
-        
+        echo '</div></ul>';
+
         echo '<h2 class="new-slide"><a href="#" id="addSlide">Add Another Slide +</a></h2>';
         
         

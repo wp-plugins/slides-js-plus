@@ -16,6 +16,7 @@ A shortcode is generated for easy implementation.
 Features of Slides JS Plus 1.0 consist of:
 
 * Create as many galleries or slideshows as you want.
+* Drag and Drop Sorting.
 * Shortcode implementation.
 * Individual control over each gallery or slideshow.
 * Awesome support.
@@ -35,3 +36,6 @@ View your slideshow or gallery.
 
 = 1.0 =
 * Initial Deployment
+
+= 1.0.1 =
+* Drag and Drop Sorting.
