@@ -21,15 +21,32 @@ Features of Slides JS Plus 1.0 consist of:
 * Individual control over each gallery or slideshow.
 * Awesome support.
 
+= Website =
+http://www.jeffreydev.com/portfolio/slides-js-plus/
+
+= Demo =
+http://www.jeffreydev.com/slides-js-plus-demo/
+
 
 
 == Installation ==
 
 Upload the Slides JS Plus plugin to your blog, Activate it, Go to the Slide JS Plus tab and click add new. Click Upload Image and insert into post.  Configure your height and width along with your other settings in the settings area.
 
-Add your Slides JS Plus shortcode to any page or post. [slides_js_plus].
+Add your Slides JS Plus shortcode to any page or post. [slides_js_plus id="your_id"].
 
 View your slideshow or gallery.
+
+
+== Screenshots ==
+
+1. Gallery Demo
+
+2. Slideshow Demo
+
+3. Slides JS Plus gallery selection with shortcode
+
+
 
 
 == Changelog ==
