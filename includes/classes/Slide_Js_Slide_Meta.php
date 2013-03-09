@@ -4,7 +4,7 @@
  * to create each slide with Name, Text, Image,
  * Thumnail and Link
  *
- * @author Jeff Clark 1010 Collective
+ * @author Jeff Clark
  */
 
 class Slide_Js_Slide_Meta {
@@ -66,7 +66,6 @@ class Slide_Js_Slide_Meta {
         $slide_link = maybe_unserialize( get_post_meta( $post->ID, '_slide_link', true ) );
         $slide_order = maybe_unserialize( get_post_meta( $post->ID, '_slide_order', true ) );
         
-        
         echo '<script>
                     jQuery(document).ready(function($){
                         $(function() {
@@ -112,7 +111,6 @@ class Slide_Js_Slide_Meta {
 
         echo '<h2 class="new-slide"><a href="#" id="addSlide">Add Another Slide +</a></h2>';
         
-        
     }
     
     
@@ -149,8 +147,11 @@ class Slide_Js_Slide_Meta {
         $slide_hover_pause = get_post_meta($post->ID, '_slide-hover-pause', true);
         $slide_next_prev = get_post_meta($post->ID, '_slide-next-prev', true);
         $slide_pagination = get_post_meta($post->ID, '_slide-paginations', true);
+        $slide_play = get_post_meta($post->ID, '_slide-play', true);
+        
         
         echo '<div class="slide-js-options">';
+        echo '<p><center><strong><a href="http://www.jeffreydev.com/email-newsletter/">Sign up news updates</a></strong></center></p>';
         echo '<p><label>SlideShow Style</label>';
         $slide_type == 'gallery' ? $slide_type = 'selected' : '';
         echo '<select name="slide-type">';
@@ -159,19 +160,22 @@ class Slide_Js_Slide_Meta {
         echo '</select>';
         
         echo '<p><label>Slideshow Height (px)</label>';
-        echo '<input type="text" name="slide-height" value="'.esc_attr($slide_height).'"/><p>';
+        echo '<input type="text" name="slide-height" value="'.$slide_height.'"/><p>';
         
         echo '<p><label>Slideshow Width (px)</label>';
-        echo '<input type="text" name="slide-width" value="'.esc_attr($slide_width).'"/><p>';
+        echo '<input type="text" name="slide-width" value="'.$slide_width.'"/><p>';
+        
+        echo '<p><label>Slideshow Play Speed</label>';
+        echo '<input type="text" name="slide-play" value="'.$slide_play.'"/><p>';
         
         echo '<p><label>Slideshow Speed : default: 350(ms)</label>';
-        echo '<input type="text" name="slide-speed" value="'.esc_attr($slide_speed).'"/><p>';
+        echo '<input type="text" name="slide-speed" value="'.$slide_speed.'"/><p>';
         
         echo '<p><label>Pause Speed : default: 3500(ms)</label>';
-        echo '<input type="text" name="slide-pause-speed" value="'.esc_attr($slide_pause_speed).'"/><p>';
+        echo '<input type="text" name="slide-pause-speed" value="'.$slide_pause_speed.'"/><p>';
         
         echo '<p><label>Fade Speed : default: 500(ms)</label>';
-        echo '<input type="text" name="slide-fade-speed" value="'.esc_attr($slide_slide_fade_speed).'"/><p>';
+        echo '<input type="text" name="slide-fade-speed" value="'.$slide_slide_fade_speed.'"/><p>';
         
         $selected = ($slide_preload == "0") ? 'selected' : '';
         echo '<p><label>Preloader</label>';
@@ -206,7 +210,7 @@ class Slide_Js_Slide_Meta {
         echo '<p>';
         
         $pag = ($slide_pagination == "1") ? 'selected' : '';
-        echo '<p><label>Generate Pagination</label>';
+        echo '<p><label>Generate Pagincation</label>';
         echo '<select name="slide-paginations">';
         echo '<option value="0">False</option>';
         echo '<option value="1" '.$pag .'>True</option>';
@@ -261,7 +265,8 @@ class Slide_Js_Slide_Meta {
             'slide-effect' => $_POST['slide-effect'],
             'slide-hover-pause' => $_POST['slide-hover-pause'],
             'slide-next-prev' => $_POST['slide-next-prev'],
-            'slide-paginations' => $_POST['slide-paginations']
+            'slide-paginations' => $_POST['slide-paginations'],
+            'slide-play' => $_POST['slide-play'],
         );
         
         foreach($slide_options as $key => $option) {

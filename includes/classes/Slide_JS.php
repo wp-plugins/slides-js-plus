@@ -5,7 +5,7 @@
  * build the slideshow based on
  * options selected in the backend;
  *
- * @author Jeff Clark 1010 Collective
+ * @author Jeff Clark
  */
 
 class Slide_JS {
@@ -15,6 +15,7 @@ class Slide_JS {
     var $slide_pause_speed = '3500';
     var $slide_slide_fade_speed = '500';
     var $slide_effect = 'fade';
+    var $slide_play = '5000';
     var $slide_hover_pause = true;
     var $slide_next_prev = true;
     var $slide_pagination = true;
@@ -74,11 +75,15 @@ class Slide_JS {
         if( get_post_meta($id, '_slide-fade-speed', true) != '')
                 $this->slide_slide_fade_speed = get_post_meta($id, '_slide-fade-speed', true);
         
+        if( get_post_meta($id, '_slide-play', true) != '' )
+                $this->slide_play = get_post_meta($id, '_slide-play', true);
+        
         $this->slide_preload = get_post_meta($id, '_slide-preload', true);
         $this->slide_effect = get_post_meta($id, '_slide-effect', true);
         $this->slide_hover_pause = get_post_meta($id, '_slide-hover-pause', true);
         $this->slide_next_prev = get_post_meta($id, '_slide-next-prev', true);
         $this->slide_pagination = get_post_meta($id, '_slide-paginations', true);
+        
         
         $count = 0;
         $countPage = 0;
@@ -91,7 +96,7 @@ class Slide_JS {
         $html = '<div id="'.$slider_id.'">';
         $html .= '<div class="'.$slide_containter.'" style="min-height: 100px; height: '.$slide_height.'px; width: '.$slide_width.'px ">';
             foreach($slide_img as $slide) {
-                $html .= '<a href="'.$slide_link[$count].'" style="height: '.$slide_height.'px; width: '.$slide_width.'px"><img src="'.$slide.'" alt="slide_'.$count.'" height="'.$slide_height.'px" width="'.$slide_width.'px" ></a>';
+                $html .= '<a href="'.$slide_link[$count].'" target="_blank" style="height: '.$slide_height.'px; width: '.$slide_width.'px"><img src="'.$slide.'" alt="slide_'.$count.'" height="'.$slide_height.'px" width="'.$slide_width.'px" ></a>';
                 $count++;
             }
         $html .= '</div>';
@@ -118,17 +123,17 @@ class Slide_JS {
             <script type="text/javascript">
                 jQuery(window).load(function(){
                     jQuery('#<?php echo $slider_id; ?>').slides({
-                        preload: <?php echo $this->slide_preload ?>,
+                        preload: <?php echo esc_attr($this->slide_preload )?>,
                         preloadImage: '<?php echo SLIDEJS_BASE_URL ?>includes/images/loading.gif',
-                        play: 5000,
-                        pause: <?php echo $this->slide_pause_speed ?>,
-                        effect: '<?php echo $this->slide_effect ?>',
-                        hoverPause: <?php echo $this->slide_hover_pause ?>,
+                        play: <?php echo esc_attr($this->slide_play) ?>, 
+                        pause: <?php echo esc_attr($this->slide_pause_speed) ?>,
+                        effect: '<?php echo esc_attr($this->slide_effect) ?>',
+                        hoverPause: <?php echo esc_attr($this->slide_hover_pause) ?>,
                         crossfade: true,
-                        slideSpeed: <?php echo $this->slide_speed ?>,
-                        fadeSpeed: <?php echo $this->slide_slide_fade_speed ?>,
-                        generateNextPrev: <?php echo $this->slide_next_prev ?>,
-                        generatePagination: <?php echo $this->slide_pagination ?>
+                        slideSpeed: <?php echo esc_attr($this->slide_speed) ?>,
+                        fadeSpeed: <?php echo esc_attr($this->slide_slide_fade_speed) ?>,
+                        generateNextPrev: <?php echo esc_attr($this->slide_next_prev) ?>,
+                        generatePagination: <?php echo esc_attr($this->slide_pagination) ?>
                     });
                 });
             </script>       

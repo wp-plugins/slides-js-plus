@@ -1,5 +1,5 @@
 === Slides JS Plus ===
-Contributors: Jeff Clark
+Contributors: JeffreyDev
 Tags: Simple Slideshow, Slideshows, Slideshow, Gallery, Photo Gallery, Slides JS, Slider
 Requires at least: 3.5.0
 Tested up to: 3.5.1
@@ -56,3 +56,7 @@ View your slideshow or gallery.
 
 = 1.0.1 =
 * Drag and Drop Sorting.
+
+= 1.0.2 =
+* Error patch for older version involving the media uploader
+* Slideshow Play Speed

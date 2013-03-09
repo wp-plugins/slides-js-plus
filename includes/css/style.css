@@ -67,6 +67,7 @@
     width: 32px;
     text-indent: 32px;
     overflow: hidden;
+    opacity: 0.5;
 }
 
 #slides .prev {
@@ -80,6 +81,7 @@
     width: 32px;
     text-indent: 32px;
     overflow: hidden;
+    opacity: 0.5;
 }
 
 #products .next {
@@ -93,6 +95,8 @@
     width: 32px;
     text-indent: 32px;
     overflow: hidden;
+    opacity: 0.5;
+
 }
 
 #products .prev {
@@ -105,7 +109,8 @@
     height: 32px;
     width: 32px;
     text-indent: 32px;
-    overflow: hidden;    
+    overflow: hidden; 
+    opacity: 0.5;
 }
 
 #slides ul.pagination {

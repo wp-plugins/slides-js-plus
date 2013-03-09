@@ -3,7 +3,7 @@
  * Description of Slide_Js_Setup is to 
  * setup the plugin with a CPT.
  *
- * @author Jeff Clark 1010 Collective
+ * @author Jeff Clark
  */
 
 
@@ -39,7 +39,7 @@ class Slide_Js_Setup {
             wp_enqueue_style('slidejs-styles', SLIDEJS_BASE_URL . 'includes/css/admin-style.css');
             
             /* Image Uploader */
-            wp_enqueue_media();
+            /* wp_enqueue_media(); // For new media uploader */
             wp_enqueue_script('media-upload');
             wp_enqueue_script('thickbox');
             wp_enqueue_script('image-upload', SLIDEJS_BASE_URL . 'includes/js/image.js');
