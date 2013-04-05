@@ -96,7 +96,7 @@ class Slide_JS {
         $html = '<div id="'.$slider_id.'">';
         $html .= '<div class="'.$slide_containter.'" style="min-height: 100px; height: '.$slide_height.'px; width: '.$slide_width.'px ">';
             foreach($slide_img as $slide) {
-                $html .= '<a href="'.$slide_link[$count].'" target="_blank" style="height: '.$slide_height.'px; width: '.$slide_width.'px"><img src="'.$slide.'" alt="slide_'.$count.'" height="'.$slide_height.'px" width="'.$slide_width.'px" ></a>';
+                $html .= '<a href="'.$slide_link[$count].'" style="height: '.$slide_height.'px; width: '.$slide_width.'px"><img src="'.$slide.'" alt="slide_'.$count.'" height="'.$slide_height.'px" width="'.$slide_width.'px" ></a>';
                 $count++;
             }
         $html .= '</div>';
