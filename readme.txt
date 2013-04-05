@@ -60,3 +60,6 @@ View your slideshow or gallery.
 = 1.0.2 =
 * Error patch for older version involving the media uploader
 * Slideshow Play Speed
+
+= 1.0.3 =
+* Updated linking
