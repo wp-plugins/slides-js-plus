@@ -63,3 +63,6 @@ View your slideshow or gallery.
 
 = 1.0.3 =
 * Updated linking
+
+= 1.0.4 =
+* Images are now centered if images are not all the same width.

@@ -48,12 +48,15 @@
 
 .slides_container a img {
 	display:block;
+        margin: auto;
+        width: auto;
 }
 
 .slides_container a {
         width: 570px;
 	height:270px;
 	display:block;
+        text-align: center;
 }
 
 #slides .next {

@@ -107,7 +107,7 @@ class Slide_JS {
                     $img_id = $this->slide_js_get_img_id($slide);
                     $slide_thumb = wp_get_attachment_image_src($img_id,'thumbnail', true);
 
-                    $html .= '<li><a href="#"><img src="'.$slide_thumb[0].'" alt="slide_'.$countPage.'" class="slide-thumb" height: '.$slide_height.'px; width: '.$slide_width.'px ></a></li>';
+                    $html .= '<li><a href="#"><img src="'.$slide_thumb[0].'" alt="slide_'.$countPage.'" class="slide-thumb" ></a></li>';
                     $countPage++;
                 }
 
