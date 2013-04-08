@@ -65,4 +65,4 @@ View your slideshow or gallery.
 * Updated linking
 
 = 1.0.4 =
-* Images are now centered if images are not all the same width.
+* Images are now centered if images are not all the same width

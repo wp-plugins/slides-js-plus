@@ -2,7 +2,7 @@
 /**
 Plugin Name: Slides JS Plus
 Plugin URI: http://jeffreydev.com/plugins/slides-js-plus
-Description: Slidejs Slideshow Plugin.  Allow for multiple slideshows and full control over each.
+Description: Slidejs Slideshow Plugin.  Allow for multiple slideshows and full control over each gallery, slider or static image.
 Version: 1.0.4
 Author: JeffreyDev
 Author URI: http://jeffreydev.com

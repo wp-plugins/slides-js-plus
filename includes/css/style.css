@@ -37,14 +37,6 @@
         width: 100%
 }
 
-/*
-	Each slide
-	Important:
-	Set the width of your slides
-	If height not specified height will be set by the slide content
-	Set to display block
-*/
-
 
 .slides_container a img {
 	display:block;

@@ -166,5 +166,3 @@ class Slide_JS {
     }
     
 }
-
-
